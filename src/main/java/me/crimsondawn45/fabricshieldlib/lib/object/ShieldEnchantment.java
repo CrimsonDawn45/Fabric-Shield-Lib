@@ -26,8 +26,8 @@ public class ShieldEnchantment extends Enchantment {
      * @param event - ShieldEvent to be fired for this enchantment
      * @param acceptedItem - Item that enchantment can be applied to.
      */
-    public ShieldEnchantment(Weight weight, ShieldEvent event, Item acceptedItem) {
-        super(weight, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] { EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND });
+    public ShieldEnchantment(Enchantment.Rarity rarity, ShieldEvent event, Item acceptedItem) {
+        super(rarity, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] { EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND });
 
         this.acceptedItem = acceptedItem;
         this.itemListType = ItemListType.ITEM;
@@ -43,8 +43,8 @@ public class ShieldEnchantment extends Enchantment {
      * @param event - ShieldEvent to be fired for this enchantment
      * @param acceptedItemTag - Items that enchantment can be applied to.
      */
-    public ShieldEnchantment(Weight weight, ShieldEvent event, Tag<Item> acceptedItemTag) {
-        super(weight, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] { EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND });
+    public ShieldEnchantment(Enchantment.Rarity rarity, ShieldEvent event, Tag<Item> acceptedItemTag) {
+        super(rarity, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] { EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND });
 
         this.acceptedItemTag = acceptedItemTag;
         this.itemListType = ItemListType.TAG;
@@ -60,8 +60,8 @@ public class ShieldEnchantment extends Enchantment {
      * @param event - ShieldEvent to be fired for this enchantment
      * @param acceptedItems - Items that enchantment can be applied to.
      */
-    public ShieldEnchantment(Weight weight, ShieldEvent event, Item... acceptedItemArray) {
-        super(weight, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] { EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND });
+    public ShieldEnchantment(Enchantment.Rarity rarity, ShieldEvent event, Item... acceptedItemArray) {
+        super(rarity, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] { EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND });
 
         this.acceptedItemArray = acceptedItemArray;
         this.itemListType = ItemListType.ARRAY;
@@ -76,8 +76,8 @@ public class ShieldEnchantment extends Enchantment {
      * @param weight - Rarity of the enchantment.
      * @param event - ShieldEvent to be fired for this enchantment
      */
-    public ShieldEnchantment(Weight weight, ShieldEvent event) {
-		super(weight, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] {EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND});
+    public ShieldEnchantment(Enchantment.Rarity rarity, ShieldEvent event) {
+		super(rarity, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] {EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND});
 		
         this.itemListType = ItemListType.REGISTRY;
         

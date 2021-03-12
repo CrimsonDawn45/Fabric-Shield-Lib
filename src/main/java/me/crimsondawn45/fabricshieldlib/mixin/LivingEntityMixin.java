@@ -29,7 +29,7 @@ public class LivingEntityMixin
 		
 		if(!(entity.isInvulnerableTo(source) || entity.world.isClient || !entity.isAlive() || (source.isFire() && entity.hasStatusEffect(StatusEffects.FIRE_RESISTANCE))))
 		{
-			if (amount > 0.0F && ((LivingEntityAccessor)entity).invokeBlockedByShield(source)) {
+			if (amount > 0.0F && ((LivingEntityAccessor)entity).fabricshieldlib$invokeBlockedByShield(source)) {
 				
 				/*
 				 * Handle onBlockDamage Events
@@ -51,14 +51,14 @@ public class LivingEntityMixin
 				}
 
 				//Handle Shield
-				((LivingEntityAccessor)entity).invokeDamageShield(amount);
+				((LivingEntityAccessor)entity).fabricshieldlib$invokeDamageShield(amount);
 				amount = 0.0F;
 
 				if (!source.isProjectile()) {
 					Entity sourceEntity = source.getSource();
 					
 					if (sourceEntity instanceof LivingEntity) {
-					   ((LivingEntityAccessor)entity).invokeTakeShieldHit((LivingEntity)sourceEntity);
+					   ((LivingEntityAccessor)entity).fabricshieldlib$invokeTakeShieldHit((LivingEntity)sourceEntity);
 					}
 				}
 			}
