@@ -69,9 +69,11 @@ public class FabricShield extends Item {
 		
 		DispenserBlock.registerBehavior(this, ArmorItem.DISPENSER_BEHAVIOR);
 		
-		this.addPropertyGetter(new Identifier("blocking"), (stack, world, entity) -> {
-	         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
-	    });
+		if(FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+			this.addPropertyGetter(new Identifier("blocking"), (stack, world, entity) -> {
+		         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
+		    });
+		}
 		
 		this.cooldownTicks = cooldownTicks;
 		this.repairItemTag = repairItemTag;
@@ -95,9 +97,11 @@ public class FabricShield extends Item {
 		
 		DispenserBlock.registerBehavior(this, ArmorItem.DISPENSER_BEHAVIOR);
 		
-		this.addPropertyGetter(new Identifier("blocking"), (stack, world, entity) -> {
-	         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
-	    });	
+		if(FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+			this.addPropertyGetter(new Identifier("blocking"), (stack, world, entity) -> {
+		         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
+		    });
+		}
 		
 		this.cooldownTicks = cooldownTicks;
 		this.repairItemArray = repairItems;
@@ -122,9 +126,11 @@ public class FabricShield extends Item {
 		
 		DispenserBlock.registerBehavior(this, ArmorItem.DISPENSER_BEHAVIOR);
 		
-		this.addPropertyGetter(new Identifier("blocking"), (stack, world, entity) -> {
-	         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
-	    });
+		if(FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+			this.addPropertyGetter(new Identifier("blocking"), (stack, world, entity) -> {
+		         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
+		    });
+		}
 		
 		this.cooldownTicks = cooldownTicks;
 		this.repairItem = repairItem;
@@ -150,9 +156,11 @@ public class FabricShield extends Item {
 		
 		DispenserBlock.registerBehavior(this, ArmorItem.DISPENSER_BEHAVIOR);
 		
-		this.addPropertyGetter(new Identifier("blocking"), (stack, world, entity) -> {
-	         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
-	    });
+		if(FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+			this.addPropertyGetter(new Identifier("blocking"), (stack, world, entity) -> {
+		         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
+		    });
+		}
 		
 		this.cooldownTicks = cooldownTicks;
 		this.repairItemTag = repairItemTag;
@@ -178,9 +186,11 @@ public class FabricShield extends Item {
 		
 		DispenserBlock.registerBehavior(this, ArmorItem.DISPENSER_BEHAVIOR);
 		
-		this.addPropertyGetter(new Identifier("blocking"), (stack, world, entity) -> {
-	         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
-	    });
+		if(FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+			this.addPropertyGetter(new Identifier("blocking"), (stack, world, entity) -> {
+		         return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
+		    });
+		}
 		
 		this.cooldownTicks = cooldownTicks;
 		this.repairItemArray = repairItems;
