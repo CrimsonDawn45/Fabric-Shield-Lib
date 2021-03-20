@@ -8,8 +8,6 @@ import net.minecraft.entity.damage.DamageSource;
 
 @Mixin(LivingEntity.class)
 public interface LivingEntityAccessor {
-	//@Invoker("setActiveItemStack")
-	//void fabricshieldlib$setActiveItemStack(ItemStack stack);
 	
 	@Invoker("blockedByShield")
 	boolean fabricshieldlib$invokeBlockedByShield(DamageSource source);

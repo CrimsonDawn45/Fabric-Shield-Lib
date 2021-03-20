@@ -6,7 +6,7 @@ this library is distributed via [jitpack.io](https://jitpack.io/#CrimsonDawn45/F
 
 #### gradle.properties
 ```properties
-fabric_shield_lib_version=1.3.4
+fabric_shield_lib_version=1.3.6
 ```
 
 #### **build.gradle** under dependencies
