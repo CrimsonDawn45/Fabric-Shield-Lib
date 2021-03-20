@@ -10,8 +10,6 @@ import net.minecraft.item.ItemStack;
 
 @Mixin(LivingEntity.class)
 public interface LivingEntityAccessor {
-	//@Accessor
-	//void setActiveItemStack(ItemStack stack);
 	
 	@Invoker(value = "method_6061")
 	boolean fabricshieldlib$invokeBlockedByShield(DamageSource source);
